@@ -14,18 +14,13 @@ public class Solution {
             phoneBook.put(entrySplit[0], entrySplit[1]);
         }
         
-        while(true){
-            if (scan.hasNext()){
-                String query = scan.nextLine();
-                if (phoneBook.containsKey(String.valueOf(query))){
-                    System.out.println(query+ "=" +phoneBook.get(String.valueOf(query)));
-                }
-                else{
-                    System.out.println("Not found");
-                }
+        while(scan.hasNext()){
+            String query = scan.nextLine();
+            if (phoneBook.containsKey(String.valueOf(query))){
+                System.out.println(query+ "=" +phoneBook.get(String.valueOf(query)));
             }
             else{
-                break;
+                System.out.println("Not found");
             }
         }
         scan.close();
